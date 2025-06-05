@@ -3,15 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dog API Project</title>
+    <meta
+      name="description"
+      content="Display random dog and cat images API Project."
+    />
+    <title>Pet Image Viewer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>Random Dog Viewer 🐶</h1>
-    <button id="loadDog">Get New Dog</button>
-    <div id="dogDisplay">
-      <img id="dogImage" src="" alt="Random Dog will appear here" />
-    </div>
+    <h1>Random Pet Viewer</h1>
+
+    <section id="DogImage">
+      <h2>Random Dog Viewer</h2>
+      <button id="loadDog">Get Dog Image</button>
+      <div id="dogContainer">
+        <img id="dogImage" alt="Random dog" />
+      </div>
+    </section>
+
+    <section id="CatImage">
+      <h2>Random Cat Viewer</h2>
+      <button id="loadCat">Get Cat Image</button>
+      <div id="catContainer">
+        <img id="catImage" alt="Random cat" />
+      </div>
+    </section>
 
     <script src="index.js" defer></script>
   </body>

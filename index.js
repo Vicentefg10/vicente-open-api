@@ -1,12 +1,13 @@
-const button = document.getElementById("loadDog");
+// DOG
+const dogButton = document.getElementById("loadDog");
 const dogImage = document.getElementById("dogImage");
 
 function loadRandomDog() {
   fetch("https://dog.ceo/api/breeds/image/random")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       dogImage.src = data.message;
+      dogImage.alt = "Random Dog";
     })
     .catch((err) => {
       console.error("Error fetching dog image:", err);
@@ -14,8 +15,18 @@ function loadRandomDog() {
     });
 }
 
-/* Load a dog automatically on page load */
-loadRandomDog();
+dogButton.addEventListener("click", loadRandomDog);
+loadRandomDog(); // load on page load
 
-/*And again when clicking the button */
-button.addEventListener("click", loadRandomDog);
+// CAT (simplified - no JSON fetch)
+const catButton = document.getElementById("loadCat");
+const catImage = document.getElementById("catImage");
+
+function loadRandomCat() {
+  // Add timestamp to bust cache and get a fresh random cat each time
+  catImage.src = `https://cataas.com/cat?timestamp=${new Date().getTime()}`;
+  catImage.alt = "Random Cat";
+}
+
+catButton.addEventListener("click", loadRandomCat);
+loadRandomCat(); // load on page load

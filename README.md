@@ -5,7 +5,7 @@ This website shows random **dog** and **cat** images using public APIs.
 ## APIs Used
 
 - [Dog CEO API](https://dog.ceo/dog-api/)
-- [Cat as a Service (CATAAS)](https://cataas.com/)
+- [The Cat API](https://thecatapi.com/)
 
 ## How to Download and Run
 
@@ -20,11 +20,9 @@ This website shows random **dog** and **cat** images using public APIs.
 - Click the **Get Dog Image** button to see a random dog.
 - Click the **Get Cat Image** button to see a random cat.
 
-Every time you click a button, a new image loads.  
-The dog images are fetched via API, while the cat images load directly from the CATAAS random image endpoint.
+- The dog image comes from Dog CEO API using JavaScript `fetch()`.
+- The cat image is fetched using TheCatAPI and JavaScript `fetch()`.
 
-This works by using JavaScript and the `fetch()` function for dogs, and direct image URLs for cats.
-
-If the image doesn’t load, check the browser console for any errors.
+If an image doesn’t load, check the browser console for any errors.
 
 Enjoy the pet pictures!

@@ -1,7 +1,8 @@
-// DOG
+// DOG section
 const dogButton = document.getElementById("loadDog");
 const dogImage = document.getElementById("dogImage");
 
+// Funtion to load a random dog image from the Dog API
 function loadRandomDog() {
   fetch("https://dog.ceo/api/breeds/image/random")
     .then((res) => res.json())
@@ -15,16 +16,17 @@ function loadRandomDog() {
     });
 }
 
+// Load dog image on button click and page load
 dogButton.addEventListener("click", loadRandomDog);
-loadRandomDog(); // load on page load
+loadRandomDog();
 
-// CAT (simplified - no JSON fetch)
+// CAT section
 const catButton = document.getElementById("loadCat");
 const catImage = document.getElementById("catImage");
 
+// Function to load a random cat image from the Cat API
 function loadRandomCat() {
-  // Add timestamp to bust cache and get a fresh random cat each time
-  fetch("https://api.thecatapi.com/v1/images/search") // Using the Cat API fetch
+  fetch("https://api.thecatapi.com/v1/images/search")
     .then((res) => res.json())
     .then((data) => {
       catImage.src = data[0].url;
@@ -36,5 +38,6 @@ function loadRandomCat() {
     });
 }
 
+// Load cat image on button click and page load
 catButton.addEventListener("click", loadRandomCat);
-loadRandomCat(); // load on page load
+loadRandomCat();
